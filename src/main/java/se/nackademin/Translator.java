@@ -80,7 +80,7 @@ public class Translator {
         String verb2 = "Snart kommer du vilja "+ verbD + ", ";
         String adj2 = "men då är det viktigt att du "+ adjectiveE;
         
-         String mal = adj1 +verb1 + "\n" + subs+ "\n" +  verb2 + adj2 ;;
+         String mal = adj1 +verb1 + "\n" + subs+ "\n" +  verb2 + adj2 ;
          
         return mal ;
         
