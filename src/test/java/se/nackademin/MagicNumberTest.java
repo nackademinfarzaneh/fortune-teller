@@ -6,6 +6,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 
 public class MagicNumberTest {
+    
     private MagicNumbers generateTestData() {
         MagicNumbers magicNumbers = new MagicNumbers();
         magicNumbers.setAge(16);

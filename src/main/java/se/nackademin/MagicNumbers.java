@@ -1,5 +1,7 @@
 package se.nackademin;
 
+import javax.swing.JOptionPane;
+
 public class MagicNumbers {
 
     private String name;
@@ -8,29 +10,81 @@ public class MagicNumbers {
     private int age;
     private int height;
 
-    public int calculateA() {
-        //TODO: calculate A
-        return 0;
+    public int calculateA() {   
+           
+      int age = this.age;
+      int sifra = 0;
+      sifra = nameLength()+ age;
+      
+      while( sifra >=  10 ){
+          
+          sifra = sifra - 7;
+      }
+      
+    return sifra;
     }
 
     public int calculateB() {
-        //TODO: calculate B
-        return 0;
+        
+       int location = this.location.length();
+       int incom = this.income;   
+       int sifra = location + incom ;
+       while (sifra >= 10){
+           sifra = sifra - 7;
+       }
+ 
+       return sifra;
     }
 
     public int calculateC() {
-        //TODO: calculate C
-        return 0;
+       
+       int abHeight =  calculateA()+calculateB()-this.height ;  
+       
+         while(abHeight < 0){
+             
+         abHeight = abHeight +10;
+      }
+
+       return abHeight;
     }
 
     public int calculateD() {
-        //TODO: calculate D
-        return 0;
+        
+       int a = calculateA();
+       int b = calculateB();       
+       int c = calculateC();
+       int sifra = 0;
+       
+       if (a > 5){
+           a = a + b;
+       }
+       else {
+          a = a + c;
+       }
+       
+      sifra = a - this.income ;
+      
+      while(sifra < 0){
+         sifra = sifra +10;
+      }
+      
+        return sifra;
     }
 
     public int calculateE() {
-        //TODO: calculate E
-        return 0;
+        
+        double ag = 0;
+      
+      ag = this.age * this.income;
+      ag = (ag * this.income);
+      ag = (ag * this.height);      
+      
+        double d = Math.sqrt(ag);         
+        while ( d >= 10){
+            
+            d = d /2;
+        }      
+      return  Integer.valueOf(new Long(Math.round(d)).intValue());
     }
 
     public void setName(String name) {
@@ -52,4 +106,22 @@ public class MagicNumbers {
     public void setHeight(int height) {
         this.height = height;
     }
+    
+    public int subtrahera(int sifra){        
+              
+        while (sifra >= 10){  
+            
+            sifra =sifra - 7;            
+        }        
+        return sifra;
+    }
+    public int nameLength(){
+       
+       String delims = " ";
+       String[] s1 = this.name.split(delims);        
+ 
+        
+        return s1.length;
+    }
+
 }
