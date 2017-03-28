@@ -69,34 +69,20 @@ public class Translator {
      * @param adjectiveE
      * @return 
      */
-  //  public String generertMall(String adjectiveA, String verbB, String sub, String verbD, String adjectiveE) {
-    public String generertMall(){
+  public String generertMall(String adjectiveA, String verbB, String sub, String verbD, String adjectiveE) {
+  //  public String generertMall(){
         
-     
-         
-       int calA = magicnumber.calculateA();
-       int calB = magicnumber.calculateB();
-       int calC = magicnumber.calculateC();
-       int calD = magicnumber.calculateD();
-       int calE = magicnumber.calculateE();
-       
-       String adjA = getAdjektiv(calA);
-       String verbB = getVerb(calB);
-       String subsC = getSubstantiv(calC);
-       String verbD = getVerb(calD);
-       String adjE = getAdjektiv(calE); 
+
                 
-        String adj1 =  "Din framtid är " + adjA + ". " ;
+        String adj1 =  "Din framtid är " + adjectiveA + ". " ;
         String verb1 = "Du borde sluta "+ verbB  +". ";
-        String subs = "Vi ser att du snart kommer att skaffa " + subsC + ". ";
+        String subs = "Vi ser att du snart kommer att skaffa " + sub + ". ";
         String verb2 = "Snart kommer du vilja "+ verbD + ", ";
-        String adj2 = "men då är det viktigt att du "+ adjE;
-
-
+        String adj2 = "men då är det viktigt att du "+ adjectiveE;
         
-         String mal = adj1 +verb1 + subs+  verb2 + adj2 ;      
+         String mal = adj1 +verb1 + "\n" + subs+ "\n" +  verb2 + adj2 ;;
          
-        return mal;
+        return mal ;
         
     }
 

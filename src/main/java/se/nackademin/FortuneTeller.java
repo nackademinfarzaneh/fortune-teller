@@ -18,11 +18,23 @@ public class FortuneTeller {
      * @return A scientifically proven fortune
      *
      */
-    public String calculate() {
-        //TODO: Implement
- 
-       String mal = translator.generertMall();      
+    public String calculate() { 
+        //TODO: Implement            
+         
+       int calA = magicNumbers.calculateA();
+       int calB = magicNumbers.calculateB();
+       int calC = magicNumbers.calculateC();
+       int calD = magicNumbers.calculateD();
+       int calE = magicNumbers.calculateE();
        
+       String adjA = translator.getAdjektiv(calA);
+       String verbB = translator.getVerb(calB);
+       String subsC = translator.getSubstantiv(calC);
+       String verbD = translator.getVerb(calD);
+       String adjE = translator.getAdjektiv(calE); 
+ 
+       String mal = translator.generertMall ( adjA,verbB,subsC, verbD, adjE);      
+      
         return mal;
     }
 
