@@ -133,8 +133,6 @@ public class FortuneTellerTest {
     @Test
     public void testSetIncomeLike10_000_000() {
 
-        //  magicNumbers.setIncome(incomeValue);
-        // return incomeValue <= 10_000_000;
         MagicNumbers magicNumbersMock = mock(MagicNumbers.class);
         Translator translatorMock = mock(Translator.class);
         FortuneTeller fortuneTeller = new FortuneTeller(magicNumbersMock, translatorMock);

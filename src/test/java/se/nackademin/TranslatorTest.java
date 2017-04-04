@@ -29,8 +29,6 @@ public class TranslatorTest {
         String result = translator.getNoun(0);
         assertEquals("en lönehöjning", result);
 
-        //    boolean result = translator.getNoun(0).equals(expResult);
-        //  assertTrue("should return true for valid input", result);
     }
 
     /**

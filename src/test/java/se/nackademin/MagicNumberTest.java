@@ -105,4 +105,16 @@ public class MagicNumberTest {
         int second = magicNumbers.calculateC();
         assertNotEquals("C should provide different values for different names", first, second);
     }
+    
+    @Test 
+   /* if (d > 5) {
+            d += calculateB();
+        } else {  */
+    public void testDWithgraterthen5(){
+        
+        magicNumbers.setAge(18);
+        assertEquals("D is not calculated correct", 9, magicNumbers.calculateD());
+        
+        
+    }
 }
