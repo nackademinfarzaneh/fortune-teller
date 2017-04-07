@@ -32,6 +32,7 @@ public class FortuneTellerTest {
         boolean result = fortuneTeller.setAge("25");
         assertTrue("should return true for valid input", result);
         verify(magicNumbersMock, times(1)).setAge(25);
+
     }
 
     @Test
@@ -139,7 +140,6 @@ public class FortuneTellerTest {
 
         boolean result = fortuneTeller.setIncome("10000000");
         assertTrue("Should return true if you write 10_000_000", result);
-
     }
 
     @Test

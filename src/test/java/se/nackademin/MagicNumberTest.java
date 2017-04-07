@@ -5,8 +5,11 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 public class MagicNumberTest {
+
     MagicNumbers magicNumbers;
 
     @Before
@@ -105,16 +108,61 @@ public class MagicNumberTest {
         int second = magicNumbers.calculateC();
         assertNotEquals("C should provide different values for different names", first, second);
     }
-    
-    @Test 
-   /* if (d > 5) {
+
+    @Test
+    /* if (d > 5) {
             d += calculateB();
         } else {  */
-    public void testDWithgraterthen5(){
-        
+    public void testDWithgraterthen5() {
+
         magicNumbers.setAge(18);
         assertEquals("D is not calculated correct", 9, magicNumbers.calculateD());
-        
-        
+
     }
+
+    @Test
+    public void testVerifyAisNotGraterThen_9() {
+
+        MagicNumbers magicNumbersMock = mock(MagicNumbers.class);
+
+        when(magicNumbersMock.calculateA()).thenReturn(10);
+        assertEquals("A kan inte vara större än 9", 10, magicNumbersMock.calculateA());
+    }
+
+    @Test
+    public void testVerifyBisNotGraterThen_9() {
+
+        MagicNumbers magicNumbersMock = mock(MagicNumbers.class);
+
+        when(magicNumbersMock.calculateB()).thenReturn(10);
+        assertEquals("B kan inte vara större än 9", 10, magicNumbersMock.calculateB());
+    }
+
+    @Test
+    public void testVerifyCisNotGraterThen_9() {
+
+        MagicNumbers magicNumbersMock = mock(MagicNumbers.class);
+
+        when(magicNumbersMock.calculateC()).thenReturn(10);
+        assertEquals("C kan inte vara större än 9", 10, magicNumbersMock.calculateC());
+    }
+
+    @Test
+    public void testVerifyDisNotGraterThen_9() {
+
+        MagicNumbers magicNumbersMock = mock(MagicNumbers.class);
+
+        when(magicNumbersMock.calculateD()).thenReturn(10);
+        assertEquals("D kan inte vara större än 9", 10, magicNumbersMock.calculateD());
+    }
+
+    @Test
+    public void testVerifyEisNotGraterThen_9() {
+
+        MagicNumbers magicNumbersMock = mock(MagicNumbers.class);
+
+        when(magicNumbersMock.calculateE()).thenReturn(10);
+        assertEquals("E kan inte vara större än 9", 10, magicNumbersMock.calculateE());
+    }
+
 }

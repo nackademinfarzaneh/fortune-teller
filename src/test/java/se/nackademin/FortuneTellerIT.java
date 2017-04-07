@@ -1,9 +1,11 @@
 package se.nackademin;
 
 import static junit.framework.Assert.assertFalse;
+import org.junit.Assert;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class FortuneTellerIT {
 
@@ -33,6 +35,47 @@ public class FortuneTellerIT {
         assertEquals("Verify issue #37 have been fixed, negative income input should switch to positive value.", "Din framtid är vacker. Du borde sluta resa. Vi ser att du snart kommer att skaffa en lönesänkning. Snart kommer du vilja mäta, men då är det viktigt att du är snabb.", output);
 
     }
+    //incomeValue <= 10_000_000
+
+    @Test
+    public void testIncomeLessThen_10_000_000() {
+        FortuneTeller fortuneTeller = new FortuneTeller(new MagicNumbers(), new Translator());
+        boolean output = fortuneTeller.setIncome("9999999");
+        assertTrue("Should return true", output);
+
+    }
+
+    @Test
+    public void testIncomeEquleTo_10_000_000() {
+        FortuneTeller fortuneTeller = new FortuneTeller(new MagicNumbers(), new Translator());
+        boolean output = fortuneTeller.setIncome("10000000");
+        assertTrue("Should return true", output);
+
+    }
+    
+        @Test
+    public void testIncomeGreterThen_10_000_000() {
+        FortuneTeller fortuneTeller = new FortuneTeller(new MagicNumbers(), new Translator());
+        boolean output = fortuneTeller.setIncome("10000001");
+        assertFalse("Should return false", output);
+
+    }
+
+    @Test
+    public void testSetNameNull() {
+        FortuneTeller fortuneTeller = new FortuneTeller(new MagicNumbers(), new Translator());
+
+        assertFalse("should return false,", fortuneTeller.setName(null));
+        // assertFalse(message, true);
+    }
+
+    @Test
+    public void testSetNameEmpty() {
+        FortuneTeller fortuneTeller = new FortuneTeller(new MagicNumbers(), new Translator());
+
+        assertFalse("should return false,", fortuneTeller.setName(""));
+        // assertFalse(message, true);
+    }
 
     @Test
     public void testHeightNull() {
@@ -50,12 +93,14 @@ public class FortuneTellerIT {
         // assertFalse(message, true);
     }
 
+    @Test
     public void testLocationNull() {
         FortuneTeller fortuneTeller = new FortuneTeller(new MagicNumbers(), new Translator());
 
         assertFalse("should return false,", fortuneTeller.setLocation(null));
     }
 
+    @Test
     public void testLocationEmpty() {
         FortuneTeller fortuneTeller = new FortuneTeller(new MagicNumbers(), new Translator());
 
