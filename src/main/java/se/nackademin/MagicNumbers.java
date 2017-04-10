@@ -11,8 +11,10 @@ public class MagicNumbers {
     public int calculateA() {
         int a = name.split(" ").length;
         a += age;
+
         while (a > 10) {
             a -= 7;
+
         }
         return a;
     }
@@ -20,9 +22,12 @@ public class MagicNumbers {
     public int calculateB() {
         int b = location.length();
         b += income;
+
         while (b >= 10) {
             b -= 7;
+
         }
+
         return b;
     }
 
@@ -59,7 +64,8 @@ public class MagicNumbers {
         e *= income;
         e *= height;
         double ef = Math.sqrt(e);
-        while (ef >= 10) {
+       while (ef >= 10) {           
+   //     while (ef >= 9) {      //Den här vilkoren gäller om man ska kunna testa  att E ska vara mellan 9 och 0.
             ef /= 2.0;
             ef = Math.round(ef);
         }
