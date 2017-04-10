@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: se.nackademin.FortuneTellerGuiIT
 -------------------------------------------------------------------------------
-Tests run: 7, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 41.325 sec <<< FAILURE! - in se.nackademin.FortuneTellerGuiIT
-testInvalidAge(se.nackademin.FortuneTellerGuiIT)  Time elapsed: 10.181 sec  <<< ERROR!
-org.junit.runners.model.TestTimedOutException: test timed out after 10000 milliseconds
-	at se.nackademin.FortuneTellerGuiIT.testInvalidAge(FortuneTellerGuiIT.java:104)
-
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 36.325 sec - in se.nackademin.FortuneTellerGuiIT
