@@ -101,8 +101,8 @@ public class FortuneTellerIT {
     public void testNegIncomeToPosIncom() {
         FortuneTeller fortuneTeller = new FortuneTeller(new MagicNumbers(), new Translator());
 
-        fortuneTeller.setAge("-27");
-        fortuneTeller.setHeight("-165");
+        fortuneTeller.setAge("27");
+        fortuneTeller.setHeight("0");
         fortuneTeller.setIncome("-10000");
         fortuneTeller.setLocation("Malmö");
         fortuneTeller.setName("Svante");
@@ -124,7 +124,7 @@ public class FortuneTellerIT {
 
         FortuneTeller fortuneTeller = new FortuneTeller(magicNumbers, translator);
         fortuneTeller.setAge("27");
-        fortuneTeller.setHeight("165");
+        fortuneTeller.setHeight("0");
         fortuneTeller.setIncome("10000");
         fortuneTeller.setName("Svante");
         fortuneTeller.setLocation("Malmö");
